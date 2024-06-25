@@ -10,6 +10,7 @@ local lspconf = require('lspconfig')
 lspconf.lua_ls.setup({})
 lspconf.jsonls.setup({})
 lspconf.yamlls.setup({})
+lspconf.clangd.setup({})
 
 -- LspAttach autocmd keymap
 local lsp = vim.lsp
