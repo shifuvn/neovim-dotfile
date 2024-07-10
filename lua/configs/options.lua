@@ -22,6 +22,10 @@ vopt.smarttab = true
 vopt.smartindent = true
 vopt.autoindent = true
 
+-- folding
+vopt.foldmethod = 'indent'
+vopt.foldenable = false
+
 -- mouse
 vopt.mouse = 'a'
 
@@ -43,4 +47,7 @@ vopt.termguicolors = true
 
 -- invisible char
 vopt.list = false
-vopt.fillchars = { }
+vopt.fillchars = {}
+
+-- format options
+vopt.formatoptions:remove({ 'o' })

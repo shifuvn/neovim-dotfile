@@ -1,1 +1,1 @@
-vim.cmd [[ colorscheme arctic ]]
+vim.cmd [[ colorscheme darcula ]]

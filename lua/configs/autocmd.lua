@@ -19,9 +19,6 @@ autocmd('TextYankPost', {
 -- auto balance window on resize
 autocmd('VimResized', { group = new_augroup('window_resizing'), command = 'tabdo wincmd =' })
 
--- disable insert new line as comment when using o
-autocmd('BufWinEnter', { group = new_augroup('not_comment_on_newline'), command = 'setlocal formatoptions-=o' })
-
 -- close man and help
 autocmd('FileType', {
     group = new_augroup('close_with_q'),
