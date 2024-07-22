@@ -1,18 +1,21 @@
-local vim = vim
-
+local telescope_previewer = require('telescope.previewers')
 require('telescope').setup({
     defaults = {
         file_ignore_patterns = { '.git', '.cache', 'node_modules' },
-        sorting_strategy = 'ascending'
+        sorting_strategy = 'ascending',
+        shorten_path = true,
+        layout_strategy = 'horizontal',
+        borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+        previewers = true,
+        file_previewer = telescope_previewer.vim_buffer_cat.new,
+        grep_previewer = telescope_previewer.vim_buffer_vimgrep.new,
+        qflist_previewer = telescope_previewer.vim_buffer_qflist.new,
+        buffer_previewer_maker = telescope_previewer.buffer_previewer_maker
+    },
+    extensions = {
+        ['ui-select'] = {
+            require('telescope.themes').get_dropdown({})
+        }
     }
 })
-
--- keymaps
-local set = vim.keymap.set
-local silent_opts = { noremap = true, silent = true }
-local builtin = require('telescope.builtin')
-
-set('n', '<space><CR>', ':Telescope <CR>', silent_opts)
-set('n', '<space>ff', builtin.find_files, silent_opts)
-set('n', '<space>fb', builtin.buffers, silent_opts)
-set('n', '<space>fg', builtin.live_grep, silent_opts)
+require('telescope').load_extension('ui-select')

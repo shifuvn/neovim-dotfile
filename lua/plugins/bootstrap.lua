@@ -52,6 +52,10 @@ return require('packer').startup(function(use)
         requires = { 'nvim-lua/plenary.nvim' }
     }
 
+    -- preview
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
+
     -- indent
     use 'NMAC427/guess-indent.nvim'
+    use "lukas-reineke/indent-blankline.nvim"
 end)

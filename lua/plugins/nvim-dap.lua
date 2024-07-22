@@ -39,27 +39,27 @@ dap.configurations.go = {
 }
 
 -- configure DAP keymaps
-local keymap = vim.keymap.set
-keymap('n', '<leader>d', '', { desc = '+debug', noremap = true })
-keymap('n', '<leader>dB', function() dap.set_breakpoint(vim.fn.input('Dap breakpoint condition: ')) end, {
+local keyset = vim.keymap.set
+keyset('n', '<leader>d', '', { desc = '+debug', noremap = true })
+keyset('n', '<leader>dB', function() dap.set_breakpoint(vim.fn.input('Dap breakpoint condition: ')) end, {
     desc = 'Dap breakpoint condition',
     noremap = true
 })
-keymap('n', '<leader>db', function() dap.toggle_breakpoint() end, {
+keyset('n', '<leader>db', function() dap.toggle_breakpoint() end, {
     desc = 'Dap toggle breakpoint',
     noremap = true
 })
-keymap('n', '<leader>dc', function() dap.continue() end, { desc = 'Dap continue', noremap = true })
-keymap('n', '<leader>dC', function() dap.run_to_cursor() end, { desc = 'Dap run to cursor', noremap = true })
-keymap('n', '<leader>dg', function() dap.goto_() end, { desc = 'Dap goto line', noremap = true })
-keymap('n', '<leader>di', function() dap.step_into() end, { desc = 'Dap step into', noremap = true })
-keymap('n', '<leader>do', function() dap.step_out() end, { desc = 'Dap step out', noremap = true })
-keymap('n', '<leader>dO', function() dap.step_over() end, { desc = 'Dap step over', noremap = true })
-keymap('n', '<leader>dj', function() dap.down() end, { desc = 'Dap down', noremap = true })
-keymap('n', '<leader>dk', function() dap.up() end, { desc = 'Dap up', noremap = true })
-keymap('n', '<leader>ds', function() dap.session() end, { desc = 'Dap session', noremap = true })
-keymap('n', '<leader>dt', function() dap.terminate() end, { desc = 'Dap terminate', noremap = true })
-keymap('n', '<leader>dw', function() require('dap.ui.widgets').hover() end, { desc = 'Dap widget hover', noremap = true })
+keyset('n', '<leader>dc', function() dap.continue() end, { desc = 'Dap continue', noremap = true })
+keyset('n', '<leader>dC', function() dap.run_to_cursor() end, { desc = 'Dap run to cursor', noremap = true })
+keyset('n', '<leader>dg', function() dap.goto_() end, { desc = 'Dap goto line', noremap = true })
+keyset('n', '<leader>di', function() dap.step_into() end, { desc = 'Dap step into', noremap = true })
+keyset('n', '<leader>do', function() dap.step_out() end, { desc = 'Dap step out', noremap = true })
+keyset('n', '<leader>dO', function() dap.step_over() end, { desc = 'Dap step over', noremap = true })
+keyset('n', '<leader>dj', function() dap.down() end, { desc = 'Dap down', noremap = true })
+keyset('n', '<leader>dk', function() dap.up() end, { desc = 'Dap up', noremap = true })
+keyset('n', '<leader>ds', function() dap.session() end, { desc = 'Dap session', noremap = true })
+keyset('n', '<leader>dt', function() dap.terminate() end, { desc = 'Dap terminate', noremap = true })
+keyset('n', '<leader>dw', function() require('dap.ui.widgets').hover() end, { desc = 'Dap widget hover', noremap = true })
 
 
 -- configure dapui

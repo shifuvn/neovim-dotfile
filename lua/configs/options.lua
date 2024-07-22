@@ -8,7 +8,7 @@ vopt.cursorline = true
 vopt.number = true
 vopt.shiftwidth = 2
 vopt.shiftround = true
-vopt.scrolloff = 15
+vopt.scrolloff = 5
 vopt.sidescrolloff = 5
 vopt.lazyredraw = true
 vopt.compatible = false
@@ -47,7 +47,14 @@ vopt.termguicolors = true
 
 -- invisible char
 vopt.list = false
-vopt.fillchars = {}
+local space = "·"
+vopt.listchars:append {
+    multispace = space,
+    lead = space,
+    trail = space,
+    nbsp = space,
+    space = space,
+}
 
 -- format options
 vopt.formatoptions:remove({ 'o' })
