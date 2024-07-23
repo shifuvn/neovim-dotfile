@@ -58,3 +58,7 @@ vopt.listchars:append {
 
 -- format options
 vopt.formatoptions:remove({ 'o' })
+
+vopt.signcolumn = 'yes'
+vopt.incsearch = true
+vopt.smartcase = true
