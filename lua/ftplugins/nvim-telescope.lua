@@ -1,5 +1,5 @@
-local telescope_previewer = require('telescope.previewers')
-require('telescope').setup({
+local telescope_previewer = require 'telescope.previewers'
+require 'telescope'.setup({
     defaults = {
         file_ignore_patterns = { '.git', '.cache', 'node_modules' },
         sorting_strategy = 'ascending',
@@ -14,9 +14,9 @@ require('telescope').setup({
     },
     extensions = {
         ['ui-select'] = {
-            require'telescope.themes'.get_dropdown()
+            require 'telescope.themes'.get_dropdown()
         }
     },
 })
-require'telescope'.load_extension('ui-select')
-require'telescope'.load_extension('dap')
+require 'telescope'.load_extension('ui-select')
+require 'telescope'.load_extension('dap')

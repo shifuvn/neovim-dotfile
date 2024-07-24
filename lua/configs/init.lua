@@ -1,3 +1,3 @@
-require'configs.options'
-require'configs.autocmd'
-require'configs.keybindings'
+require 'configs.options'
+require 'configs.autocmd'
+require 'configs.keybindings'

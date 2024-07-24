@@ -3,7 +3,7 @@ local vim = vim
 local dap = require 'dap'
 local dap_ui = require 'dapui'
 
-require'nvim-dap-virtual-text'.setup()
+require 'nvim-dap-virtual-text'.setup()
 
 -- Configure dap-ui
 dap_ui.setup()

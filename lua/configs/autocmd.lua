@@ -2,7 +2,7 @@ local vim = vim
 local autocmd = vim.api.nvim_create_autocmd
 
 local function augroup(name)
-    return vim.api.nvim_create_augroup(name, {clear = true})
+    return vim.api.nvim_create_augroup(name, { clear = true })
 end
 
 -- remove trailing whitespace
@@ -59,10 +59,10 @@ autocmd('BufReadPost', {
     end
 })
 
-autocmd({'BufLeave', 'FocusLost', 'InsertEnter', 'CmdLineEnter', 'WinLeave'}, {
+autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdLineEnter', 'WinLeave' }, {
     group = augroup('conf_auto_redraw_buffer'),
     pattern = '*',
-    callback = function ()
+    callback = function()
         if vim.o.nu then
             vim.cmd.redraw()
         end
@@ -73,7 +73,7 @@ autocmd({'BufLeave', 'FocusLost', 'InsertEnter', 'CmdLineEnter', 'WinLeave'}, {
 autocmd('BufEnter', {
     group = augroup('conf_disable_auto_comment'),
     pattern = '*',
-    callback = function ()
-        vim.opt_local.formatoptions:remove({'r', 'o'})
+    callback = function()
+        vim.opt_local.formatoptions:remove({ 'r', 'o' })
     end
 })
