@@ -1,1 +1,3 @@
-require'configs.options'
+require'ftplugins'
+require'lsp'
+require'configs'

@@ -1,0 +1,8 @@
+require'ftplugins.bootstrap'
+require'ftplugins.nvim-airline'
+require'ftplugins.nvim-autopairs'
+require'ftplugins.nvim-colors'
+require'ftplugins.nvim-mason'
+require'ftplugins.nvim-cmp'
+require'ftplugins.nvim-indent'
+require'ftplugins.nvim-telescope'
