@@ -49,6 +49,7 @@ local telescope_builtin = require 'telescope.builtin'
 key_map('n', 'gd', lsp_buf.definition, { noremap = true, desc = 'LSP find definition' })
 key_map('n', 'gD', lsp_buf.declaration, { noremap = true, desc = 'LSP find declaration' })
 key_map('n', 'gr', telescope_builtin.lsp_references, { noremap = true, desc = 'LSP find references' })
+key_map('n', 'g]', telescope_builtin.lsp_implementations, { noremap = true, desc = 'LSP find implementations' })
 key_map('n', 'td', lsp_buf.type_definition, { noremap = true, desc = 'LSP find type definition' })
 key_map('n', 'K', lsp_buf.hover, { noremap = true, desc = 'LSP hover to show documentation' })
 key_map('n', '<Space>rn', lsp_buf.rename, { noremap = true, desc = 'LSP rename symbol' })

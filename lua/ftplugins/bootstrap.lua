@@ -27,9 +27,6 @@ require 'packer'.startup({
         -- File explorer
         use 'preservim/nerdtree'
 
-        -- Icon
-        use 'ryanoasis/vim-devicons'
-
         -- LSP
         use 'neovim/nvim-lspconfig'
         use 'williamboman/mason.nvim'
@@ -62,6 +59,8 @@ require 'packer'.startup({
             requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
         }
         use 'theHamsta/nvim-dap-virtual-text'
+
+        use 'RRethy/vim-illuminate'
     end,
     config = packer_conf
 })
