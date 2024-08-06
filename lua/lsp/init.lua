@@ -9,5 +9,3 @@ lsp.setup 'vimls'
 lsp.setup 'bashls'
 lsp.setup 'dockerls'
 lsp.setup 'docker_compose_language_service'
-
-require 'lsp.golang-dap'

@@ -43,3 +43,5 @@ vim.fn.sign_define('DapBreakpointRejected', {
 })
 vim.fn.sign_define('DapStopped', { text = '●', texthl = 'green', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
 vim.fn.sign_define('DapLogPoint', { text = '◆', texthl = 'yellow', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
+
+require 'ftplugins.dap.golang-dap'.setup()
